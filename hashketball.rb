@@ -46,6 +46,7 @@ end
 def allPlayers(data)
   players = []
   data.each do | team_hash |
+    puts team_hash
     names = team_hash[:players].keys
     players.push(names)
   end
