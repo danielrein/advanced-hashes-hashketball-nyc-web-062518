@@ -43,6 +43,19 @@ def num_points_scored(player_name)
   game_hash[relevantTeam.to_sym][:players][player_name.to_sym][:points]
 end
 
+def allPlayers(data)
+  players = []
+  data.each do | team_hash |
+    names = team_hash[:players].keys
+    players.push(names)
+  end
+  players
+end
+
+
+
+
+
 def shoe_size(player_name)
   relevantTeam = game_hash.keys.find { | team | game_hash[team.to_sym][:players][player_name.to_sym] }
   game_hash[relevantTeam.to_sym][:players][player_name.to_sym][:shoe]
