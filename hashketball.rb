@@ -53,7 +53,7 @@ def allPlayers(data)
   players
 end
 
-allPlayers(game_hash)
+puts game_hash.values.map
 
 
 
